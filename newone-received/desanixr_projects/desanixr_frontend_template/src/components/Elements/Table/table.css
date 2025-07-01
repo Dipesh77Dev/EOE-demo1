@@ -1,0 +1,16 @@
+table {
+  border: 1px solid var(--color-shade6);
+  border-radius: 2rem;
+}
+
+td {
+  /* border: 1px solid #ddd; */
+  background-color: var(--color-shade1);
+  color: var(--color-shade8);
+}
+
+table th {
+  text-align: center;
+  /* background-color: var(--color-shade9); */
+  /* color: var(--color-shade5); */
+}

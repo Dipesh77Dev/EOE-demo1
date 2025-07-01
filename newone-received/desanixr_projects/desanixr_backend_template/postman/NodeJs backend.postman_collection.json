@@ -1,0 +1,640 @@
+{
+  "info": {
+    "_postman_id": "06c8abee-8e8f-4f93-ab2a-229eda86e964",
+    "name": "NodeJs backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "18549956"
+  },
+  "item": [
+    {
+      "name": "Status Check loader>express.ts",
+      "item": [
+        {
+          "name": "GetStatus",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url1}}/status",
+              "host": ["{{url1}}"],
+              "path": ["status"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "HeadStatus",
+          "request": {
+            "method": "HEAD",
+            "header": [],
+            "url": {
+              "raw": "{{url1}}/status",
+              "host": ["{{url1}}"],
+              "path": ["status"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Current User/Get By Id",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [""],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/users/me",
+              "host": ["{{url}}"],
+              "path": ["users", "me"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\r\n    \"firstName\" : \"abc\",\r\n    \"lastName\" : \"xyz\",\r\n    \"email\" : \"abcxyz12@gmail.com\",\r\n    \"password\" : \"abcxyz\",\r\n    \"contact\" : \"12345\",\r\n    \"bio\" : \"something to implement with some extra functionalities\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/users/profile/6357ed4ed9f0a1857894ee0a",
+              "host": ["{{url}}"],
+              "path": ["users", "profile", "6357ed4ed9f0a1857894ee0a"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/users",
+              "host": ["{{url}}"],
+              "path": ["users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete user",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/users/6357ed4ed9f0a1857894ee0a",
+              "host": ["{{url}}"],
+              "path": ["users", "6357ed4ed9f0a1857894ee0a"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Discussions",
+      "item": [
+        {
+          "name": "Post Discussion",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\" : \"3rd Discussion\",\r\n    \"body\" : \"Lorem ipsum contains the typefaces more in use, an aspect that allows you to have an overview of the rendering of the text in terms of font choice and font size.\\nLorem ipsum dolor sit amet\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/discussions",
+              "host": ["{{url}}"],
+              "path": ["discussions"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all Discussion",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/discussions",
+              "host": ["{{url}}"],
+              "path": ["discussions"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get id by discussion",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/discussions/635f57a8c7b93dd964c78b33",
+              "host": ["{{url}}"],
+              "path": ["discussions", "635f57a8c7b93dd964c78b33"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete by id discussion",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/discussions/6360ebc271d9d11278c4ceb7",
+              "host": ["{{url}}"],
+              "path": ["discussions", "6360ebc271d9d11278c4ceb7"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update by id discussion",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"body\" : \"3rd Discussion with extra\",\r\n    \"title\" : \"3rd Discussion with extra\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/discussions/6360ebc271d9d11278c4ceb7",
+              "host": ["{{url}}"],
+              "path": ["discussions", "6360ebc271d9d11278c4ceb7"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Screen",
+      "item": [
+        {
+          "name": "Get All Screen",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/screens",
+              "host": ["{{url}}"],
+              "path": ["screens"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get screen by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/screens/636f32cb8bd38d6b28d2b66b",
+              "host": ["{{url}}"],
+              "path": ["screens", "636f32cb8bd38d6b28d2b66b"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Screen",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"screenName\" : \"S1\",\r\n    \"description\" : \"1st Screen\",\r\n    \"imageId\" : \"635f5139c7b93dd964c78b2d\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/screens",
+              "host": ["{{url}}"],
+              "path": ["screens"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Screen by Id",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"screenName\" : \"S3\",\r\n    \"description\" : \"3rd Screen upcoming\",\r\n    \"imageId\" : \"635f5139c7b93dd964c78b2d\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/screens/636f57008f8416002401541f",
+              "host": ["{{url}}"],
+              "path": ["screens", "636f57008f8416002401541f"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Screen By Id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/screens/636f57008f8416002401541f",
+              "host": ["{{url}}"],
+              "path": ["screens", "636f57008f8416002401541f"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Images",
+      "item": [
+        {
+          "name": "Add Images",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "imageTitle",
+                  "value": "2nd Image",
+                  "type": "text"
+                },
+                {
+                  "key": "fileData",
+                  "type": "file",
+                  "src": "/D:/Desani XR oct 22/Dummy Videos & Images for testing/CWH-1.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{url}}/images",
+              "host": ["{{url}}"],
+              "path": ["images"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Image",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/images",
+              "host": ["{{url}}"],
+              "path": ["images"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Image By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/images/636b699527b419002499bc4a",
+              "host": ["{{url}}"],
+              "path": ["images", "636b699527b419002499bc4a"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update image by id",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "fileData",
+                  "type": "file",
+                  "src": "/D:/Desani XR oct 22/Dummy Videos & Images for testing/Dip Goku.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{url}}/images/636b699527b419002499bc4a",
+              "host": ["{{url}}"],
+              "path": ["images", "636b699527b419002499bc4a"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete image by id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/images/636b699527b419002499bc4a",
+              "host": ["{{url}}"],
+              "path": ["images", "636b699527b419002499bc4a"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/auth/logout",
+              "host": ["{{url}}"],
+              "path": ["auth", "logout"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"firstName\" : \"test\",\r\n    \"lastName\" : \"2\",\r\n    \"email\" : \"test2@gmail.com\",\r\n    \"password\" : \"test2\",\r\n    \"contact\" : \"12345\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/auth/register",
+              "host": ["{{url}}"],
+              "path": ["auth", "register"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();\r",
+                  "pm.collectionVariables.set(\"token\", jsonData.token);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"test1@gmail.com\",\r\n    \"password\": \"test1\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/auth/login",
+              "host": ["{{url}}"],
+              "path": ["auth", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login-Details",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"userId\": \"6365e527e02e2b00246ab78e\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/auth/loginDetails",
+              "host": ["{{url}}"],
+              "path": ["auth", "loginDetails"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Scene",
+      "item": [
+        {
+          "name": "Add 3d Model",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"sceneName\" : \"3rd Scene\",\r\n    \"description\" : \"3rd Scene\",\r\n    \"imageId\" : \"636b735d27b419002499bc4f\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/scenes",
+              "host": ["{{url}}"],
+              "path": ["scenes"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all 3d model",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/scenes",
+              "host": ["{{url}}"],
+              "path": ["scenes"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get 3d By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/scenes/636f33848bd38d6b28d2b66c",
+              "host": ["{{url}}"],
+              "path": ["scenes", "636f33848bd38d6b28d2b66c"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update 3d model by id",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"sceneName\" : \"3rd Scene\",\r\n    \"description\" : \"3rd Scene with some update\",\r\n    \"imageId\" : \"636b735d27b419002499bc4f\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/scenes/636f33848bd38d6b28d2b66c",
+              "host": ["{{url}}"],
+              "path": ["scenes", "636f33848bd38d6b28d2b66c"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete 3d model with id",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/scenes/636f33848bd38d6b28d2b66c",
+              "host": ["{{url}}"],
+              "path": ["scenes", "636f33848bd38d6b28d2b66c"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "AgenDash",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/dash",
+          "host": ["{{url}}"],
+          "path": ["dash"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "http://localhost:9000/api",
+      "type": "default"
+    },
+    {
+      "key": "token",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "heroku_backend",
+      "value": "https://desanixr-backend.herokuapp.com/api",
+      "type": "string",
+      "disabled": true
+    }
+  ]
+}

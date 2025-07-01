@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  /* light */
+  --color-shade1: #f6f6c9;
+  --color-shade2: #bad1c2;
+  --color-shade3: #bcead5;
+  --color-shade4: #9ed5c5;
+  --color-shade5: #8ec3b0;
+  --color-shade6: #4fa095;
+  --color-shade7: #749f82;
+  --color-shade8: #425f57;
+  --color-shade9: #153462;
+  --color-delete: #ff9494;
+  --color-font-light: white;
+  --color-font-dark: black;
+
+  /* Dark */
+  /*
+  --color-shade1: #DEF5E5;
+  --color-shade2: #BCEAD5;
+  --color-shade3: #9ED5C5;
+  --color-shade4: #8EC3B0;
+  */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.view3d-wrapper {
+  width: 100%;
+  height: 95%;
+  background-color: var(--color-shade3);
+}
+
+/* Button related css */
+
+.dxr-link {
+  color: var(--color-font-dark);
+}
+
+.dxr-link:hover {
+  color: var(--color-shade8);
+}
+
+.dxr-button-reduce-mt {
+  margin-top: -40px;
+}
+
+/* Button related END */
+
+/* Drawer Body */
+.drawer-background-body {
+  background-color: var(--color-shade7);
+}
+
+.drawer-footer {
+  background-color: var(--color-shade5);
+}
+
+.drawer-title {
+  color: var(--color-font-dark);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* mainlayout  */
+.mainlayout-logo-text {
+  color: var(--color-font-dark);
+}
+
+.mainlayout-sidebar {
+  background-color: var(--color-shade8);
+}
+
+.mainlayout-sidebar-logo {
+  background-color: var(--color-shade6);
+}
+
+.mainlayout-content-body {
+  /* background-color: var(--color-shade2); */
+  background-color: #f2e5e5;
+  color: var(--color-font-dark);
+}
+
+.mainlayout-menu-userprofilelogo {
+  background-color: var(--color-shade2);
+  color: var(--color-font-dark);
+}
+
+.mainlayout-menuitem-dxrlink {
+  background-color: var(--color-shade4);
+  color: var(--color-shade9);
+}
+/* navLink  */
+.navigation-link {
+  color: var(--color-font-light);
+}
+
+.navigation-link-active {
+  background-color: var(--color-shade9);
+}
+
+.content-title {
+  color: var(--color-font-dark);
+  font-size: 1.5rem;
+}
+
+.profile-header {
+  background-color: var(--color-shade9);
+  color: var(--color-shade4);
+}
+
+.profile-content {
+  background-color: var(--color-shade4);
+  color: var(--color-font-dark);
+}
+
+/* Field Wrapper */
+.fieldwrapper-label {
+  color: var(--color-font-dark);
+}
+
+.fieldwrapper-error {
+  color: var(--color-shade1);
+}
+
+/* View Portion */
+.view-contentlayout {
+  background-color: var(--color-shade6);
+  color: var(--color-font-light);
+}
+
+/* No data found Table*/
+.table-dxrtable-nodatafound {
+  background-color: var(--color-shade3);
+  color: var(--color-shade9);
+}
+
+/* Dashboard */
+.list-disc {
+  list-style-type: none;
+}
+
+.dashboard-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-container {
+  padding: 2px 16px;
+  background-color: var(--color-shade9);
+  color: var(--color-shade2);
+}
+
+/* EventDetail Image List */
+.eventDetailImage {
+  list-style-type: disc;
+  line-height: 200%;
+}

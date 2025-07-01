@@ -1,0 +1,23 @@
+.break-inside {
+  -moz-column-break-inside: avoid;
+  break-inside: avoid;
+}
+.flex-item {
+  padding: 20px;
+  font-size: 16px;
+  text-align: center;
+  margin: 20px;
+  max-height: 22rem;
+  width: 21rem;
+}
+
+.slider-dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: gray;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 1s ease;
+}
